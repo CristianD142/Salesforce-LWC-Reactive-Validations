@@ -1,0 +1,12 @@
+<template>
+    <lightning-input type="text" label="Enter some text" value={value} onchange={handleChange}></lightning-input>
+    
+    <template lwc:if={formatedErrors}>
+        <ul>
+            <template for:each={formatedErrors} for:item="error" >
+                <li key={error.index}>{error.value}</li>
+            </template>
+        </ul>
+    </template>
+    
+</template>
